@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
+body {
+  background-color: rgb(193, 221, 241);
+}

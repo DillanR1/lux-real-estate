@@ -12,4 +12,21 @@ const app = express();
 
 const PORT = process.env.PORT || 4000;
 
+app.set("view engine", "ejs");
+
+// ------------- Middleware ---------- //
+
+// Serve static assets (Front End JavaScript, CSS, Images ETC. )
+console.log("Absolute path to projecct directory = ", __dirname);
+
+app.use(express.static(`${__dirname}/public`));
+
+// -------------- Routes ------------- //
+
+// Home Root Route
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
+// ------------ Server Listener ----------- //
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
