@@ -1,0 +1,24 @@
+{
+  "name": "lux-real-estate",
+  "version": "1.0.0",
+  "description": "\"Node/Express Real Estate App\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DillanR1/lux-real-estate.git"
+  },
+  "author": "Dillan Roby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DillanR1/lux-real-estate/issues"
+  },
+  "homepage": "https://github.com/DillanR1/lux-real-estate#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.13"
+  }
+}
