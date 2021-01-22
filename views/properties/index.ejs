@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lux Real Estate</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/properties">All Properties</a>
+          </li>
+          <li>
+            <a href="/properties/new">New Property</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Properties Index</h1>
+      <% if(properties.length) { %> <% properties.forEach((property)=> { %>
+      <h4><%= property.city %></h4>
+      <% }) %> <% } else { %>
+      <h4>No Properties Found!</h4>
+      <% } %>
+    </main>
+  </body>
+</html>
