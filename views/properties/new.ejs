@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lux Real Estate</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/properties">All Properties</a>
+          </li>
+          <li>
+            <a href="/properties/new">New Property</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Add New Property</h1>
+      <!-- "Cannot POST /properties" is the error we get here, it means that
+    there is either a typo / syntax error or that we have not created our route
+    No route currently exists for create/"POST"-->
+      <form action="/properties" method="POST">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" />
+
+        <button type="submit">Add Property</button>
+      </form>
+    </main>
+  </body>
+</html>

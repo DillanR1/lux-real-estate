@@ -20,4 +20,14 @@ router.get("/", (req, res) => {
   });
 });
 
+// New Property
+router.get("/new", (req, res) => {
+  res.render("properties/new");
+});
+
+// Create Property
+router.post("/", (req, res) => {
+  // Query the database to create a new record
+});
+
 module.exports = router;
