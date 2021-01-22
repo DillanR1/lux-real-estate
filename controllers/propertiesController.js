@@ -27,7 +27,9 @@ router.get("/new", (req, res) => {
 
 // Create Property
 router.post("/", (req, res) => {
+  // NOTE configure body parser
   // Query the database to create a new record
+  // Redirect to the properties index page or the show page
 });
 
 module.exports = router;
