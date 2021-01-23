@@ -29,7 +29,19 @@ router.get("/new", (req, res) => {
 router.post("/", (req, res) => {
   // NOTE configure body parser
   // Query the database to create a new record
-  // Redirect to the properties index page or the show page
+
+  // Log the request body
+  console.log("Request body= ", req.body);
+
+  db.Property.create(req.body, (err, newProperty) => {
+    if (err) return console.log(err);
+
+    // Log the new property
+    console.log("New Property = ", newProperty);
+
+    // Redirect to the properties index page or the show page
+    res.redirect("/properties");
+  });
 });
 
 module.exports = router;
