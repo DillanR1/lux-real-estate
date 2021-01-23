@@ -6,7 +6,6 @@
     <title>Lux Real Estate</title>
     <link rel="stylesheet" href="/styles/main.css" />
   </head>
-
   <body>
     <header>
       <nav>
@@ -25,14 +24,14 @@
     </header>
 
     <main>
-      <h1>Properties Index</h1>
-      <% if(properties.length) { %> <% properties.forEach((property)=> { %>
-      <a href="/properties/<%= property._id %>">
-        <h4><%= property.city %></h4>
+      <h1>Show Property Page</h1>
+
+      <h4><%= property.city %></h4>
+      <p>created: <%= new Date(property.createdAt).toLocaleDateString() %></p>
+
+      <a href="/properties/<%= property._id %>/edit">
+        <button>Edit</button>
       </a>
-      <% }) %> <% } else { %>
-      <h4>No Properties Found!</h4>
-      <% } %>
     </main>
   </body>
 </html>

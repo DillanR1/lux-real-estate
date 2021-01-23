@@ -25,6 +25,18 @@ router.get("/new", (req, res) => {
   res.render("properties/new");
 });
 
+// Show Property
+router.get("/:id", (req, res) => {
+  // Query the database for the author by ID
+  db.Property.findById(req.params.id, (err, foundProperty) => {
+    if (err) return console.log(err);
+
+    res.render("properties/show", {
+      property: foundProperty,
+    });
+  });
+});
+
 // Create Property
 router.post("/", (req, res) => {
   // NOTE configure body parser
@@ -42,6 +54,34 @@ router.post("/", (req, res) => {
     // Redirect to the properties index page or the show page
     res.redirect("/properties");
   });
+});
+
+// Edit Properties
+router.get("/:id/edit", (req, res) => {
+  db.Property.findById(req.params.id, (err, foundProperty) => {
+    if (err) return console.log(err);
+
+    res.render("properties/edit", {
+      property: foundProperty,
+    });
+  });
+});
+
+// Update Properties
+router.put("/:id", (req, res) => {
+  // Log the data from the client
+  console.log("Updated Property = ", req.body);
+
+  db.Property.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedProperty) => {
+      if (err) return console.log(err);
+
+      res.redirect("/properties");
+    }
+  );
 });
 
 module.exports = router;

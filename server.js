@@ -1,5 +1,8 @@
 const express = require("express");
 
+// Method-override to later change POST request to a PUT request
+const methodOverride = require("method-override");
+
 /* saving all of the functionality of the express var to app as express() returns an object
 can later invoke express() and it's methods thru app. */
 const app = express();
@@ -24,6 +27,9 @@ app.set("view engine", "ejs");
 app.use(express.static(`${__dirname}/public`));
 
 console.log("Absolute path to projecct directory = ", __dirname);
+
+// Method Override
+app.use(methodOverride("_method"));
 
 // Express Body Parser
 app.use(express.urlencoded({ extended: false }));
