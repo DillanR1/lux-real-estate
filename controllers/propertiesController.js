@@ -84,4 +84,17 @@ router.put("/:id", (req, res) => {
   );
 });
 
+// Delete Properties
+router.delete("/:id", (req, res) => {
+  console.log("Deleting Property ID = ", req.params.id);
+  db.Property.findByIdAndDelete(req.params.id, (err, deletedProperty) => {
+    if (err) return console.log(err);
+
+    // Log the deleted author
+    console.log("Deleted property = ", deletedProperty);
+  });
+
+  res.redirect("/properties");
+});
+
 module.exports = router;

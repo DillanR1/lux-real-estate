@@ -29,6 +29,14 @@
       <h4><%= property.city %></h4>
       <p>created: <%= new Date(property.createdAt).toLocaleDateString() %></p>
 
+      <form
+        style="display: inline"
+        action="/properties/<%= property._id %>?_method=Delete"
+        method="POST"
+      >
+        <button type="submit">Delete</button>
+      </form>
+
       <a href="/properties/<%= property._id %>/edit">
         <button>Edit</button>
       </a>
