@@ -1,0 +1,93 @@
+---------- This is the note page where pertinant notes and their corresponding code snippets will be logged ----------
+              
+              ----- This is done for legibility purposes, as notes in the code can be visually conflicting -----
+
+
+---------- Controllers ----------
+
+// Properties Index
+
+router.get("/", (req, res) => {
+  NOTE Query the DB for all properties with an empty object {}, (no criteria at this time)
+  db.Property.find({}, (err, allProperties) => {
+    if (err) return console.log(err);
+
+     NOTE Log all properties
+    console.log("All Properties = ", allProperties);
+
+    res.render("properties/index", {
+      properties: allProperties,
+    });
+  });
+});
+
+
+// Show Property
+
+router.get("/:id", (req, res) => {
+  NOTE Query the database for the author by ID
+  db.Property.findById(req.params.id, (err, foundProperty) => {
+    if (err) return console.log(err);
+
+    res.render("properties/show", {
+      property: foundProperty,
+    });
+  });
+});
+
+// Create Property
+
+
+router.post("/", (req, res) => {
+  NOTE configure body parser
+  NOTE Query the database to create a new record
+
+  NOTE Log the request body
+  console.log("Request body= ", req.body);
+
+  db.Property.create(req.body, (err, newProperty) => {
+    if (err) return console.log(err);
+
+    NOTE Log the new property
+    console.log("New Property = ", newProperty);
+
+    NOTE Redirect to the properties index page or the show page
+    res.redirect("/properties");
+  });
+});
+
+---------- Server.JS Notes ----------
+
+
+NOTE Method-override to later change POST request to a PUT request
+
+const methodOverride = require("method-override");
+
+NOTE saving all of the functionality of the express var to app as express() returns an object
+can later invoke express() and it's methods thru app. 
+
+const app = express();
+
+NOTE looks at process that is running. In this app it is node.
+ through node we can access the environment, which is the global object.
+ can create vars within the env object.
+ when we deploy, we are looking for a var within the env called PORT. If it exists, we will use it.
+ if one does not exist, and we are working locally then const PORT = process.env.PORT || 4000; is acceptable 
+
+const PORT = process.env.PORT || 4000;
+
+
+---------- New.EJS ----------
+
+ <h1>Add New Property</h1>
+     
+    NOTE  <!-- "Cannot POST /properties" is the error we get here, it means that
+    there is either a typo / syntax error or that we have not created our route
+    No route currently exists for create/"POST"-->
+
+      <form action="/properties" method="POST">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" />
+
+        <button type="submit">Add Property</button>
+      </form>
