@@ -7,6 +7,7 @@ const db = require("../models");
 
 // Properties Index
 router.get("/", (req, res) => {
+  console.log("Request Session = ", req.session);
   db.Property.find({}, (err, allProperties) => {
     if (err) return console.log(err);
 
@@ -20,6 +21,7 @@ router.get("/", (req, res) => {
 
 // New Property
 router.get("/new", (req, res) => {
+  console.log("Req Session = ", req.session);
   res.render("properties/new");
 });
 
