@@ -1,7 +1,8 @@
 // Here mongoose is going to give us the ability to make DB connections
 
 const mongoose = require("mongoose");
-const connectionString = "mongodb://localhost:27017/lux-real-estate";
+require("dotenv").config();
+const connectionString = process.env.MONGODB_URI;
 
 mongoose
   .connect(connectionString, {
@@ -16,4 +17,5 @@ mongoose
 // Make All Models Available
 module.exports = {
   Property: require("./Property"),
+  User: require("./User"),
 };

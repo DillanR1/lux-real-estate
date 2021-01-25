@@ -22,6 +22,9 @@ router.get("/", (req, res) => {
 // New Property
 router.get("/new", (req, res) => {
   console.log("Req Session = ", req.session);
+
+  if (!req.session.currentUser) return res.redirect("/login");
+
   res.render("properties/new");
 });
 

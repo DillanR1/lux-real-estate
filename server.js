@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000;
 // Controllers
 const propertiesCtrl = require("./controllers/propertiesController");
 const authCtrl = require("./controllers/authorizationController");
-// const usersCtrl = require();
+const usersCtrl = require("./controllers/usersController");
 
 // Sets view engine config
 app.set("view engine", "ejs");
@@ -64,7 +64,7 @@ app.use("/", authCtrl);
 app.use("/properties", propertiesCtrl);
 
 // Users Routes
-//app.use("/profile, usersCtrl");
+app.use("/profile", usersCtrl);
 
 // ------------ Server Listener ----------- //
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
