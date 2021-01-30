@@ -41,7 +41,7 @@ router.post("/login", (req, res) => {
 
         // Create A New Session and Respond 200
         req.session.currentUser = currentUser;
-        res.redirect("profile");
+        res.redirect("/profile");
       } else {
         // Respond with 400 If Passwords Do Not Match
         return res.send("Passwords do not match");
@@ -54,7 +54,7 @@ router.post("/login", (req, res) => {
 router.post("/register", (req, res) => {
   // CHeck For Existing User Account
   db.User.findOne({ email: req.body.email }, (err, foundUser) => {
-    if (err) return console.log("User Alreadt Exists");
+    if (err) return console.log("User Already Exists");
 
     // Return Error If Account Already Exists
     if (foundUser) return console.log("User Already Exists");
