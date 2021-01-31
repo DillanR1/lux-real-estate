@@ -12,7 +12,7 @@ router.get("/login", (req, res) => {
 });
 
 // Register form route
-router.get("register", (req, res) => {
+router.get("/register", (req, res) => {
   res.render("auth/register");
 });
 
@@ -52,7 +52,7 @@ router.post("/login", (req, res) => {
 
 // Register Create
 router.post("/register", (req, res) => {
-  // CHeck For Existing User Account
+  // Check For Existing User Account
   db.User.findOne({ email: req.body.email }, (err, foundUser) => {
     if (err) return console.log("User Already Exists");
 
