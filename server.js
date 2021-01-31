@@ -1,14 +1,18 @@
 const express = require("express");
 const session = require("express-session");
 const methodOverride = require("method-override");
+
 const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 4000;
+
+console.log(process.env.GOOGLE_BOOKS_API)
 
 // Controllers
 const propertiesCtrl = require("./controllers/propertiesController");
 const authCtrl = require("./controllers/authorizationController");
 const usersCtrl = require("./controllers/usersController");
+const apiCtrl = require('./controllers/apiController');
 
 // Sets view engine config
 app.set("view engine", "ejs");
@@ -44,11 +48,11 @@ app.use(
   })
 );
 
-app.use((req, res, next) => {
-  if (req.url !== "/login" && req.url !== "/" && !req.session.currentUser)
-    return res.redirect("/login");
-  next();
-});
+// app.use((req, res, next) => {
+//   if (req.url !== "/login" && req.url !== "/register" && req.url !== "/" && !req.session.currentUser)
+//     return res.redirect("/login");
+//   next();
+// });
 
 // -------------- Routes ------------- //
 
@@ -65,6 +69,9 @@ app.use("/properties", propertiesCtrl);
 
 // Users Routes
 app.use("/profile", usersCtrl);
+
+// API Routes
+app.use('/api/v1', apiCtrl);
 
 // ------------ Server Listener ----------- //
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
