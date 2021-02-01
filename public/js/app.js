@@ -1,26 +1,23 @@
-const { deepStrictEqual } = require("assert");
-
 console.log("come here often?");
 
-const getPropsBtn = document.getElementById('getProps');
-const deleteBtn = document.querySelector('.delete');
+const deleteBtn = document.querySelector(".delete");
 
-deleteBtn.addEventListener('click', handleDelete);
+deleteBtn.addEventListener("click", handleDelete);
 
 function handleClick(event) {
-    //GET Request to Properties
-    fetch('/api/v1/properties', {
-        credentials: 'include',
-    })
+  //GET Request to Properties
+  fetch("/api/v1/properties", {
+    credentials: "include",
+  })
     .then((stream) => stream.json())
     .then((data) => renderProperties(data));
 }
 
-function renderProperties(properiesArr) {
-    const propertiesSection = document.getElementById('properties');
+function renderProperties(propertiesArr) {
+  const propertiesSection = document.getElementById("properties");
 
-    propertiesArr.forEach((property) => {
-        const propertyTemplate = `
+  propertiesArr.forEach((property) => {
+    const propertyTemplate = `
         <div class="card" style="width:18rem;>
             <img style="height: 200px" src="" class=card-img-top" alt="...">
             <div class="card-body">
@@ -30,18 +27,17 @@ function renderProperties(properiesArr) {
             </div>
         </div>
       `;
-        
-        propertiesSection.insertAdjacentHTML('beforeend', propertyTemplate);
 
-    });
+    propertiesSection.insertAdjacentHTML("beforeend", propertyTemplate);
+  });
 }
 
 function handleDelete(event) {
-    console.log(event.target.id);
-    const propertyId =event.target.id;
-    fetch(`/api/v1/properties/${propertyId}`, {
-        method: 'DELETE',
-    })
-        .then((stream) => stream.json())
-        .then((res) => window.location.pathname = '/properties');
+  console.log(event.target.id);
+  const propertyId = event.target.id;
+  fetch(`/api/v1/properties/${propertyId}`, {
+    method: "DELETE",
+  })
+    .then((stream) => stream.json())
+    .then((res) => (window.location.pathname = "/properties"));
 }

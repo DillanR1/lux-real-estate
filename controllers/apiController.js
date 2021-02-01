@@ -18,12 +18,12 @@ router.get("/properties", (req, res) => {
   });
 });
 
-router.delete('/properties/:id', (req, res) => {
-    db.Property.findByIdAndDelete(req.params.id, (err, deletedProperty) => {
-        if (err) return res.json(err);
+router.delete("/properties/:id", (req, res) => {
+  db.Property.findByIdAndDelete(req.params.id, (err, deletedProperty) => {
+    if (err) return res.json(err);
 
-        res.json({successs: true})
-    })
-})
+    res.json({ successs: true });
+  });
+});
 
 module.exports = router;
