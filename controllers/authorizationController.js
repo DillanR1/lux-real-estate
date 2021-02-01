@@ -4,7 +4,6 @@ const router = express.Router();
 
 // DB
 const db = require("../models");
-const { hash } = require("bcryptjs");
 
 // Login Form Route
 router.get("/login", (req, res) => {
@@ -63,21 +62,26 @@ router.post("/register", (req, res) => {
     bcrypt.genSalt(10, (err, salt) => {
       if (err) return console.log(err);
 
-      // Destructure New User Data From Request
-      const { name, email, password } = req.body;
-
-      // Construct New User Object with Hashed Password
-      const newUser = {
-        name,
-        email,
-        password: hash, // IMPORTANT to hash passwords! Never save plain test password
-      };
-
-      // Create New User
-      db.User.create(newUser, (err, createdUser) => {
+      // Turn plain text to hashed Password
+      bcrypt.hash(req.body.password, salt, (err, hash) => {
         if (err) return console.log(err);
 
-        res.redirect("/login");
+        // Destructure New User Data From Request
+        const { name, email, password } = req.body;
+
+        // Construct New User Object with Hashed Password
+        const newUser = {
+          name,
+          email,
+          password: hash, // IMPORTANT to hash passwords! Never save plain test password
+        };
+
+        // Create New User
+        db.User.create(newUser, (err, createdUser) => {
+          if (err) return console.log(err);
+
+          res.redirect("/login");
+        });
       });
     });
   });
