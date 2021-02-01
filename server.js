@@ -1,12 +1,12 @@
 const express = require("express");
 const session = require("express-session");
 const methodOverride = require("method-override");
-
-const app = express();
 require("dotenv").config();
+const app = express();
 const PORT = process.env.PORT || 4000;
 
-console.log(process.env.GOOGLE_BOOKS_API)
+
+//console.log(process.env.GOOGLE_BOOKS_API)
 
 // Controllers
 const propertiesCtrl = require("./controllers/propertiesController");
@@ -22,7 +22,7 @@ app.set("view engine", "ejs");
 // Serve static assets (Front End JavaScript, CSS, Images ETC. )
 app.use(express.static(`${__dirname}/public`));
 
-console.log("Absolute path to projecct directory = ", __dirname);
+console.log("Absolute path to project directory = ", __dirname);
 
 // Method Override
 app.use(methodOverride("_method"));
@@ -49,7 +49,7 @@ app.use(
 );
 
 // app.use((req, res, next) => {
-//   if (req.url !== "/login" && req.url !== "/register" && req.url !== "/" && !req.session.currentUser)
+//   if (req.url !== "/login" && req.url && req.url !== "/" && !req.session.currentUser)
 //     return res.redirect("/login");
 //   next();
 // });
