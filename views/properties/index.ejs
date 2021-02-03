@@ -1,31 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lux Real Estate</title>
-    <link rel="stylesheet" href="/styles/main.css" />
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/properties">All Properties</a>
-          </li>
-          <li>
-            <a href="/properties/new">New Property</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<%- include('../partials/_head') %>
 
-    <main>
-      <h1>Properties Index</h1>
+    <main class="container h-100 mt-5">
+
+      <h2 class="mb-4">Properties</h2>
+
       <% if(properties.length) { %> <% properties.forEach((property)=> { %>
       <a href="/properties/<%= property._id %>">
         <h4><%= property.city %></h4>
@@ -34,5 +13,7 @@
       <h4>No Properties Found!</h4>
       <% } %>
     </main>
-  </body>
-</html>
+
+<%- include('../partials/_footer') %>
+
+
