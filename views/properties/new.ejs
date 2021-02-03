@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lux Real Estate</title>
-    <link rel="stylesheet" href="/styles/main.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/properties">All Properties</a>
-          </li>
-          <li>
-            <a href="/properties/new">New Property</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<%- include('../partials/_head') %>
 
-    <main>
+  <main class="container h-100 mt-5">
+
       <h1>Add New Property</h1>
       <form action="/properties" method="POST">
         <label for="city">City</label>
@@ -32,5 +10,6 @@
         <button type="submit">Add Property</button>
       </form>
     </main>
-  </body>
-</html>
+
+    %- include('../partials/_footer') %>
+
