@@ -1,39 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lux Real Estate</title>
-    <link rel="stylesheet" href="/styles/main.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/properties">All Properties</a>
-          </li>
-          <li>
-            <a href="/properties/new">New Property</a>
-          </li>
-          <l1>
-            <a href="/register">Register</a>
-          </l1>
-          <l1>
-            <a href="/login">Login</a>
-          </l1>
-          <li>
-            <a href="/logout">Logout</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<%- include('../partials/_head') %>
 
-    <main>
-      <h1>User Profile</h1>
-    </main>
-  </body>
-</html>
+  <main class="container h-100 mt-5">
+
+    <h1>Profile</h1>
+
+    <h4><%= user.name %> </h4>
+    
+  </main>
+
+<%- include('../partials/_footer') %>

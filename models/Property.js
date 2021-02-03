@@ -6,6 +6,23 @@ const propertySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    state: {
+      type: String,
+      required: false,
+    },
+    zip: {
+      type: String,
+      required: false,
+    },
+    list_price: {
+      type: String,
+      required: false,
+    },
+    img: {
+      data: Buffer,
+      contentType: String,
+      required: false,
+    },
   },
   { timestamps: true }
 );

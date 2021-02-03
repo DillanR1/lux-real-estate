@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lux Real Estate</title>
-    <link rel="stylesheet" href="/styles/main.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/properties">All Properties</a>
-          </li>
-          <li>
-            <a href="/properties/new">New Property</a>
-          </li>
-          <l1>
-            <a href="/register">Register</a>
-          </l1>
-          <l1>
-            <a href="/login">Login</a>
-          </l1>
-        </ul>
-      </nav>
-    </header>
+<%- include('../partials/_head') %>
 
     <main>
-      <h2>Register</h2>
+      <h2 class="mb-4">Register</h2>
 
       <form action="/register" method="POST">
         <div class="form-group">
@@ -54,6 +25,5 @@
           Register
         </button>
       </form>
-    </main>
-  </body>
-</html>
+
+<%- include('../partials/_footer') %>
