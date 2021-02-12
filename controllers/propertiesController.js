@@ -41,7 +41,7 @@ router.get("/:id", (req, res) => {
 
 // Create Property
 router.post("/", (req, res) => {
-  console.log("Request body= ", req.body);
+  console.log("Request body = ", req.body);
 
   db.Property.create(req.body, (err, newProperty) => {
     if (err) return console.log(err);
