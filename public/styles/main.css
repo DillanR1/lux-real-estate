@@ -23,18 +23,48 @@ nav {
   color: #f8f9fa;
 }
 
-.center-pic {
-  padding-top: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  height: 800px;
-
-}
-
 body {
   background-color: rgb(193, 221, 241);
 }
 
+/* ---- Slider ---- */
+.carousel-item{
+  height: 500px;
+  min-height: 100px;
+  background: no-repeat scroll center scroll;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
 
+.carousel-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.35;
+}
+
+.carousel-caption {
+  bottom: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.carousel-caption h5 {
+  font-size: 100px;
+  font-weight: 700px;
+}
+
+.carousel-control-prev {
+  width: 8%;
+}  
+
+.carousel-control-prev-icon {
+  width: 4rem;
+  height: 4rem;
+  color: rgb(193, 221, 241);
+}
