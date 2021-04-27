@@ -15,56 +15,112 @@ nav {
 }
 
 .nav-link {
- color: #f8f9fa;
-
+  color: #f8f9fa;
 }
 
 .navbar-brand {
   color: #f8f9fa;
 }
 
-body {
+body,
+h1,
+.perks,
+.flex-group {
   background-color: rgb(193, 221, 241);
 }
 
 /* ---- Slider ---- */
-.carousel-item{
-  height: 500px;
-  min-height: 100px;
-  background: no-repeat scroll center scroll;
-  -webkit-background-size: contain;
-  background-size: contain;
+
+/* Carousel */
+
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {
+  content: center;
+}
+.carousel-item {
+  text-align: center;
 }
 
-.carousel-item::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: #000;
-  opacity: 0.35;
-}
-
-.carousel-caption {
-  bottom: 100px;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-.carousel-caption h5 {
-  font-size: 100px;
-  font-weight: 700px;
-}
-
-.carousel-control-prev {
-  width: 8%;
-}  
-
+.carousel-control-next-icon,
 .carousel-control-prev-icon {
-  width: 4rem;
-  height: 4rem;
-  color: rgb(193, 221, 241);
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  padding: 25px;
+}
+
+.demo-homes {
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  max-width: 770px;
+}
+
+.carousel {
+  width: 80vw;
+  margin: 0 auto;
+  height: auto;
+}
+
+/* Amenity Section */
+
+.flex-group {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-width: 50%;
+  max-width: 950px;
+  padding-top: 150px;
+}
+
+.perks {
+  display: flex;
+  justify-content: center;
+  color: rgb(181, 102, 255);
+}
+
+.flex-container {
+  flex: 0 50%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: space-around;
+  align-content: flex-start;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  background-color: rgb(193, 221, 241);
+  position: relative;
+}
+
+.amenity-text {
+  max-width: 400px;
+}
+
+.pic {
+  width: 400px;
+}
+
+.amenity {
+  width: 400px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 6px 4px rgba(22, 29, 29, 0.536);
+}
+
+.flex-item {
+  flex: 0 1 auto;
+  padding: 5px;
+
+  margin: 10px;
+
+  line-height: 35px;
+  color: rgba(0, 0, 0, 0.877);
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
 }
