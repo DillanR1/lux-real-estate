@@ -1,0 +1,74 @@
+{
+    "properties": [
+        {
+            "city": "Boise",
+            "state": "Idaho",
+            "zip": "83714",
+            "list_price": "$367,499",
+            "img": "https://www.buildidaho.com/Documents%20and%20Settings/54/Site%20Documents/Slider/Features/Boise-Idaho-Homes-for-Sale-1.jpg"
+        },
+        {
+            "city": "Coeur D'Alene",
+            "state": "Idaho",
+            "zip": "83814",
+            "list_price": "$2,717,750",
+            "img": "https://assets.jlscontent.com/photos/idcdamls/205/20-5522.jpg"
+        },
+        {
+            "city": "The Woodlands",
+            "state": "Texas",
+            "zip": "77382",
+            "list_price": "$3,425,000",
+            "img": "https://photos.harstatic.com/191387149/hr/img-1.jpeg"
+        },
+        {
+            "city": "Houston",
+            "state": "Texas",
+            "zip": "77082",
+            "list_price": "$1,803,400",
+            "img": "https://ap.rdcpix.com/a19ea40b0d859493b2e4286ec9c1b102l-m644314982xd-w1020_h770_q80.jpg"
+        },
+        {
+            "city": "Brentwood",
+            "state": "Tennessee",
+            "zip": "37027",
+            "list_price": "$3,002,618",
+            "img": "https://www.brentwoodtnhome.com/wp-content/uploads/2019/04/Homes-for-Sale-in-Fountainbrooke-Brentwood-TN-1024x690.jpg"
+        },
+        {
+            "city": "Smyrna",
+            "state": "Tennessee",
+            "zip": "37167",
+            "list_price": "$2,702,250",
+            "img": "https://photos12.crye-leike.com/photos/nashville/2/4/2042624-01.jpg"
+        },
+        {
+            "city": "Sioux Falls",
+            "state": "South Dakota",
+            "zip": "57103",
+            "list_price": "$529,900",
+            "img": "https://ap.rdcpix.com/777ddc2e80dd10324d1d59c8beb2173cl-m1308035513od-w1024_h768.webp"
+        },
+        {
+            "city": "Lead",
+            "state": "South Dakota",
+            "zip": "57754",
+            "list_price": "$1,100,000",
+            "img": "https://ap.rdcpix.com/fe66bf6f0fae54d6dfb03c21c5419daal-m3097169994od-w1024_h768.webp"
+        },
+        {
+            "city": "Eureka",
+            "state": "Montana",
+            "zip": "59917",
+            "list_price": "$929,900",
+            "img": "https://photos.zillowstatic.com/fp/f3e7a21e950f27321c7741c2af8025f7-p_e.jpg"
+        },
+        {
+            "city": "Missoula",
+            "state": "Montana",
+            "zip": "59804",
+            "list_price": "$1,150,000",
+            "img": "https://photos.zillowstatic.com/fp/19896c9fc8758b6001dd6926e56702ee-p_e.jpg"
+        }
+]
+}
