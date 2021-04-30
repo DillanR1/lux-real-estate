@@ -1,14 +1,16 @@
 <%- include('../partials/_head') %>
 
-    <main>
-      <h1>Edit Property Page</h1>
+<main>
+  <h1>Edit Property Page</h1>
 
-      <form action="/properties/<%= property._id %>?_method=PUT" method="POST">
-        <label for="city">City</label>
-        <input type="text" id="city" name="city" value="<%= property.name %>" />
+  <form action="/properties/<%= property._id %>?_method=PUT" method="POST">
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" value="<%= property.name %>" />
 
-        <button type="submit">Edit Property</button>
-      </form>
-    </main>
+    <button type="submit">Edit Property</button>
+  </form>
+</main>
 
 <%- include('../partials/_footer') %>
+
+<!-- page needs to refresh upon deleting properties -->

@@ -191,3 +191,8 @@ h1,
   color: #6ab04c;
   margin-bottom: 20px;
 }
+
+.show-property {
+  width: 400px;
+  height: 400px;
+}

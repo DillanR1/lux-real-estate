@@ -1,22 +1,28 @@
 <%- include('../partials/_head') %>
 
-    <main>
-      <h1>Show Property Page</h1>
+<main>
+  <h1>Show Property Page</h1>
 
-      <h4><%= property.city %></h4>
-      <p>created: <%= new Date(property.createdAt).toLocaleDateString() %></p>
+  <h4><%= property.city %></h4>
+  <h4><%= property.state %></h4>
+  <h4><%= property.zip %></h4>
+  <h4><%= property.list_price %></h4>
+ 
+ 
+  <img class="show-property" src="<%= property.propertyPicUrl %>"></img>
+  <p>created: <%= new Date(property.createdAt).toLocaleDateString() %></p>
 
-      <form
-        style="display: inline"
-        action="/properties/<%= property._id %>?_method=Delete"
-        method="POST"
-      >
-        <button type="submit">Delete</button>
-      </form>
+  <form
+    style="display: inline"
+    action="/properties/<%= property._id %>?_method=Delete"
+    method="POST"
+  >
+    <button type="submit">Delete</button>
+  </form>
 
-      <a href="/properties/<%= property._id %>/edit">
-        <button>Edit</button>
-      </a>
-    </main>
-  
+  <a href="/properties/<%= property._id %>/edit">
+    <button>Edit</button>
+  </a>
+</main>
+
 <%- include('../partials/_footer') %>

@@ -18,9 +18,9 @@ const propertySchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    img: {
+    propertyPicUrl: {
       data: Buffer,
-      contentType: String,
+      type: String,
       required: false,
     },
   },
