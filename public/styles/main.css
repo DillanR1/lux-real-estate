@@ -33,11 +33,11 @@ h1,
 
 /* Carousel */
 
-.carousel-item,
+/* .carousel-item,
 .carousel-inner,
 .carousel-inner img {
   content: center;
-}
+} */
 .carousel-item {
   text-align: center;
 }
@@ -51,17 +51,15 @@ h1,
 }
 
 .demo-homes {
-  display: block;
-  object-fit: cover;
-  object-position: center center;
-  max-width: 770px;
+  width: 700px;
+  height: 55%;
 }
 
-.carousel {
+/* .carousel {
   width: 80vw;
   margin: 0 auto;
   height: auto;
-}
+} */
 
 /* Amenity Section */
 
