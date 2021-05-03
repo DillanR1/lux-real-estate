@@ -42,17 +42,46 @@ h1,
   text-align: center;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: black;
+}
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   width: 100px;
   height: 100px;
-  background-color: black;
+
   padding: 25px;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  transition: 0.4s;
+  background-color: #44eeaa;
+}
+
+.carousel-bottom-btn {
+  width: 50px;
+  height: 5px;
+  margin: 5px;
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: #44aaee;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.carousel-bottom-btn:hover {
+  transition: 0.4s;
+  background-color: #44eeaa;
 }
 
 .demo-homes {
   width: 700px;
   height: 55%;
+  border-radius: 25px;
 }
 
 /* .carousel {
@@ -61,7 +90,7 @@ h1,
   height: auto;
 } */
 
-/* Amenity Section */
+/* Perks and Amenities Section */
 
 .flex-group {
   margin: auto;
@@ -74,10 +103,14 @@ h1,
 }
 
 .perks {
-  display: flex;
-  justify-content: center;
-  color: rgb(181, 102, 255);
-  padding-bottom: 10px;
+  font-family: "montserrat", sans-serif;
+  background-color: rgb(193, 221, 241);
+  line-height: 35px;
+  color: rgba(0, 0, 0, 0.877);
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .flex-container {

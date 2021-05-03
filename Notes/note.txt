@@ -3,6 +3,91 @@
               ----- This is done for legibility purposes, as notes in the code can be visually conflicting -----
 
 
+
+------  To-do -----
+
+----- Home page needs: -----
+
+A call to action. One or two simple, eye-catching elements that direct the user 
+to do a thing. Maybe "See our listings!" that redirects to all properties.
+
+
+Fix space between slider picture and buttons
+
+add css to buttons on the slider
+
+adjust font and color of the text throughout the site
+
+Add a media query to organize the text and pictures for different screen sizes
+
+Fix the picture stacking effect for smaller screens in the "testimonials" section
+this will probably need to be fixed with a media query
+
+Add real text to "testimonials" section
+
+Add font-awesome so rating-stars show up
+
+
+
+
+---- All properties page needs:  -----
+
+H1 and property links centered. Consider adding a search feature utilizing a sorting algorithm.
+
+NOTE: to search, consider making the links and search dynamic. define city, state and maybe a series
+of fixed prices as variables. The fixed prices would come from a dropdown menu. 
+
+Before this, consider also adding more cities as hard coded values, and adding pagination.
+It is important to note that the search result may need to be paginated as well. 
+
+This can be broken into a stretch goal. A compromise would be pagination with a city search function.
+
+
+
+---- New Property page needs: -----
+
+consider adjusting font weight and style.
+
+Center content and add padding to the button or space the button away
+from the bottom of the last text field
+
+consider adding an animation while the page "loads" the new property.
+
+
+
+---- Show Property Page needs: ----
+
+Descriptive text for each field. I.E. city, state, zip.
+
+center all elements on the page. Consider adding a border radius effect to the image. 
+
+Pictures need to be re-sized similarly to the slider. Base the dimensions on the smallest picture
+
+
+
+
+---- Misc Needs ----
+
+Once a user is logged in, the login button should disappear. The Register button should also
+disappear as well.
+
+once a user is logged out, display a message stating the user has been logged out.
+
+When a user registers a new account, a brief profile page is seen.
+Add a profile page where a user can keep track of their listings. 
+
+Add functionality to add listings or "like" them. "liked" listings will be added to the user's profile.
+
+SOCIAL MEDIA LINKS IN FOOTER!!!
+
+---- other ideas ----
+Add "realtor chat" function 
+
+
+
+
+
+
 ---------- Controllers ----------
 
 // Properties Index
