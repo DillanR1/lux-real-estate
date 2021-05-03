@@ -1,15 +1,40 @@
 <%- include('../partials/_head') %>
 
-  <main class="container h-100 mt-5">
+<main class="container h-100 mt-5">
+  <h1 class="mb-4">Add New Property</h1>
 
-      <h1>Add New Property</h1>
-      <form action="/properties" method="POST">
-        <label for="city">City</label>
-        <input type="text" id="city" name="city" />
+  <form action="/properties" method="POST">
+    <div class="new-property-data">
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" class="form-control" />
 
-        <button type="submit">Add Property</button>
-      </form>
-    </main>
+      <label for="state">State</label>
+      <input type="text" id="state" name="state" class="form-control" />
 
-    %- include('../partials/_footer') %>
+      <label for="zip">Zip</label>
+      <input type="text" id="zip" name="zip" class="form-control" />
 
+      <label for="list_price">List Price</label>
+      <input
+        type="text"
+        id="list_price"
+        name="list_price"
+        class="form-control"
+      />
+
+      <label for="propertyPicUrl">Property Photo URL</label>
+      <input
+        type="text"
+        id="propertyPicUrl"
+        name="propertyPicUrl"
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary float-right">
+      Add Property
+    </button>
+  </form>
+</main>
+
+<%- include('../partials/_footer') %>

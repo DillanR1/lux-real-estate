@@ -192,7 +192,18 @@ h1,
   margin-bottom: 20px;
 }
 
+/*  New Property Page */
+
+.new-property-data {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Show Single Property Page */
+
 .show-property {
   width: 400px;
   height: 400px;
 }
+
+/*  Register  */
