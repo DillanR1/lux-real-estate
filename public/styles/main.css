@@ -47,7 +47,7 @@ h1,
 
 #carouselExampleCaptions.carousel.slide {
   padding-top: 50px;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -63,9 +63,10 @@ h1,
 .carousel-control-next,
 .carousel-control-prev {
   background-color: #212529;
+  border-radius: 25px;
+  opacity: 1;
   width: 8%;
   top: 50px;
-  border-radius: 25px;
   border: none;
   /* margin: 0, 10px, 0, 10px; */
 }
@@ -79,7 +80,8 @@ h1,
 .carousel-control-next:hover,
 .carousel-control-prev:hover {
   transition: 0.4s;
-  background-color: #44eeaa;
+  background-color: rgb(193, 221, 241);
+  opacity: 0.6;
 }
 
 .carousel-bottom-btn {
@@ -102,7 +104,7 @@ h1,
 
 .demo-homes {
   object-fit: cover;
-  width: 700px;
+  width: 1000px;
   height: 45%;
   border-radius: 25px;
   box-shadow: 3px 3px 6px 4px rgba(22, 29, 29, 0.536);
@@ -136,6 +138,11 @@ h1,
   border: 2px solid black;
   background-color: blanchedalmond;
   border-radius: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  padding: 20px;
 }
 
 .pic {
@@ -148,14 +155,6 @@ h1,
   height: 250px;
   border-radius: 25px;
   box-shadow: 3px 3px 6px 4px rgba(22, 29, 29, 0.536);
-}
-
-.flex-item {
-  flex: 0 1 auto;
-  line-height: 35px;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
 }
 
 /* Testimonials */
@@ -221,6 +220,32 @@ h1,
 .stars {
   color: #994cb0;
   margin-bottom: 20px;
+}
+
+.amenities-wrapper div:nth-child(2) {
+  order: -1;
+}
+
+.amenities-wrapper div:nth-child(5) {
+  order: 7;
+}
+
+/* re-order amenities section */
+@media screen and (max-width: 830,) {
+  .amenities-wrapper div:nth-child(2) {
+    order: -1;
+  }
+
+  .amenities-wrapper div:nth-child(5) {
+    order: 7;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #212529;
+  opacity: 0.6;
 }
 
 /*  New Property Page */
