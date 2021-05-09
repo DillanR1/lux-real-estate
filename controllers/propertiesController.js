@@ -10,6 +10,7 @@ router.get("/", (req, res) => {
   console.log("Request Session = ", req.session);
   db.Property.find({}, (err, allProperties) => {
     if (err) return console.log(err);
+    if (!req.session.currentUser) return res.redirect("/login");
 
     console.log("All Properties = ", allProperties);
 
