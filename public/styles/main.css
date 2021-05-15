@@ -269,13 +269,59 @@ footer {
 .new-property-data {
   display: flex;
   flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
 }
 
-/* Show Single Property Page */
+.form-control {
+  margin-top: 7px;
+}
+
+.add-property-btn {
+  margin: 7px auto;
+  display: flex;
+  min-width: 500px;
+}
+
+/* Show Single Property Page
+    Will need refactoring */
 
 .show-property {
-  width: 400px;
-  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+}
+/* 
+.show-property {
+   width: 400px;
+  height: 400px; 
+} */
+
+/* Login page */
+#login.row {
+  display: block;
+}
+
+.form-group {
+  padding-bottom: 7px;
+}
+
+.mb-4,
+#login-btn {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
 }
 
 /*  Register  */
+#register-form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.register-form-group {
+  padding-bottom: 7px;
+}

@@ -1,28 +1,30 @@
 <%- include('../partials/_head') %>
 
 <main>
-  <h1>Show Property Page</h1>
+  <div class="show-property">
+    <h1>Show Property Page</h1>
 
-  <h4><%= property.city %></h4>
-  <h4><%= property.state %></h4>
-  <h4><%= property.zip %></h4>
-  <h4><%= property.list_price %></h4>
- 
- 
-  <img class="show-property" src="<%= property.propertyPicUrl %>"></img>
-  <p>created: <%= new Date(property.createdAt).toLocaleDateString() %></p>
+    <h4><%= property.city %></h4>
+    <h4><%= property.state %></h4>
+    <h4><%= property.zip %></h4>
+    <h4><%= property.list_price %></h4>
+  
+  
+    <img class="show-property" src="<%= property.propertyPicUrl %>"></img>
+    <p>created: <%= new Date(property.createdAt).toLocaleDateString() %></p>
 
-  <form
-    style="display: inline"
-    action="/properties/<%= property._id %>?_method=Delete"
-    method="POST"
-  >
-    <button type="submit" class="btn btn-primary float-right">Delete</button>
-  </form>
+    <form
+      style="display: inline"
+      action="/properties/<%= property._id %>?_method=Delete"
+      method="POST"
+    >
+      <button type="submit" class="btn btn-primary float-right">Delete</button>
+    </form>
 
-  <a href="/properties/<%= property._id %>/edit">
-    <button class="btn btn-primary float-right">Edit</button>
-  </a>
+    <a href="/properties/<%= property._id %>/edit">
+      <button class="btn btn-primary float-right">Edit</button>
+    </a>
+  </div>  
 </main>
 
 <%- include('../partials/_footer') %>
