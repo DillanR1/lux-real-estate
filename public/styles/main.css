@@ -286,19 +286,45 @@ footer {
 /* Show Single Property Page
     Will need refactoring */
 
+#property-data-card {
+  border-radius: 25px;
+  background-color: black;
+  margin: 20px;
+}
+
+.property-data {
+  display: flex;
+  font-size: 40px;
+}
+
+.data-col {
+  background-color: white;
+  max-width: 40%;
+}
+
+.image-col {
+  background-color: violet;
+  max-width: 40%;
+}
+
+.time-stamp {
+  font-size: 30px;
+}
+
+/*
 .show-property {
+  width: 600px;
+  height: 600px;
+}
+
+#property-data-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 1000px;
-}
-/* 
-.show-property {
-   width: 400px;
-  height: 400px; 
+  margin: 0 auto;
 } */
 
 /* Login page */
+
 #login.row {
   display: block;
 }
