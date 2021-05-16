@@ -288,23 +288,37 @@ footer {
 
 #property-data-card {
   border-radius: 25px;
-  background-color: black;
-  margin: 20px;
+  background-color: white;
+  margin: 30px 40px;
+  box-shadow: 5px 5px 8px 10px rgba(22, 29, 29, 0.536);
+  justify-content: space-evenly;
+}
+
+#property-data-list {
 }
 
 .property-data {
   display: flex;
-  font-size: 40px;
+  flex-direction: column;
+  font-size: 30px;
+  margin: 0 auto;
 }
 
 .data-col {
-  background-color: white;
+  background-color: rgba(12, 187, 240, 0.719);
   max-width: 40%;
 }
 
 .image-col {
-  background-color: violet;
+  background-color: rgb(110, 45, 1);
   max-width: 40%;
+}
+
+.show-property {
+  object-fit: cover;
+  height: 400px;
+  width: 400px;
+  border-radius: 25px;
 }
 
 .time-stamp {
