@@ -292,9 +292,11 @@ footer {
   margin: 30px 40px;
   box-shadow: 5px 5px 8px 10px rgba(22, 29, 29, 0.536);
   justify-content: space-evenly;
+  z-index: 1;
 }
 
-#property-data-list {
+#property-data-card.row {
+  z-index: 1;
 }
 
 .property-data {
@@ -304,21 +306,28 @@ footer {
   margin: 0 auto;
 }
 
-.data-col {
+#data-col.col {
   background-color: rgba(12, 187, 240, 0.719);
-  max-width: 40%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 25px;
+  margin: 20px;
+  max-width: 75%;
 }
 
 .image-col {
   background-color: rgb(110, 45, 1);
   max-width: 40%;
+  object-fit: contain;
 }
 
 .show-property {
   object-fit: cover;
-  height: 400px;
-  width: 400px;
-  border-radius: 25px;
+  height: 600px;
+  width: 100%;
+  border-radius: 45px;
+  padding: 20px;
+  max-width: 100%;
 }
 
 .time-stamp {

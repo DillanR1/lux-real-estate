@@ -2,31 +2,36 @@
 
 <main class="h-100">
   <div class="row" id="property-data-card" >
-    <div class="col data-col">
+    <div class="col" id="data-col">
       <ul id="property-data-list">
         <li class="property-data">City: <%= property.city %></li>
         <li class="property-data">State: <%= property.state %></li>
         <li class="property-data">Zip-code: <%= property.zip %></li>
         <li class="property-data">Price: <%= property.list_price %></li>
+        <p class="time-stamp">created: <%= new Date(property.createdAt).toLocaleDateString() %></p>
+       
       </ul>
+
+
+      <div class="">
+        <img class="show-property" src="<%= property.propertyPicUrl %>"></img>
+
+        <a href="/properties/<%= property._id %>?_method=Delete">
+          <button class="btn btn-primary float-right">Delete</button>
+        </a>
+  
+        <a href="/properties/<%= property._id %>/edit">
+          <button class="btn btn-primary float-right">Edit</button>
+        </a>
+
+        <a href="/properties">
+          <button class="btn btn-primary float-right">Back To Properties</button>
+        </a>
+      </div>
+
     </div>
 
-    <div class="col image-col">
-      <img class="show-property" src="<%= property.propertyPicUrl %>"></img>
-      <p class="time-stamp">created: <%= new Date(property.createdAt).toLocaleDateString() %></p>
-
-      <form
-        style="display: inline"
-        action="/properties/<%= property._id %>?_method=Delete"
-        method="POST"
-      >
-        <button type="submit" class="btn btn-primary float-right">Delete</button>
-      </form>
-
-      <a href="/properties/<%= property._id %>/edit">
-        <button class="btn btn-primary float-right">Edit</button>
-      </a>
-    </div>
+    
   </div>
 </main>
 
