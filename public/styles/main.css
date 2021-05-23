@@ -315,6 +315,10 @@ footer {
   max-width: 75%;
 }
 
+.time-stamp {
+  font-size: 30px;
+}
+
 .image-col {
   background-color: rgb(110, 45, 1);
   max-width: 40%;
@@ -330,8 +334,8 @@ footer {
   max-width: 100%;
 }
 
-.time-stamp {
-  font-size: 30px;
+.property-card-link-buttons {
+  text-decoration: none;
 }
 
 /*
