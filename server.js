@@ -81,7 +81,7 @@ app.use("/", authCtrl);
 app.use("/properties", propertiesCtrl);
 
 // Users Routes
-app.use("/profile", usersCtrl);
+// app.use("/profile", usersCtrl);
 
 // API Routes
 app.use("/api/v1", apiCtrl);

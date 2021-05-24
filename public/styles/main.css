@@ -277,14 +277,13 @@ footer {
   margin-top: 7px;
 }
 
-.add-property-btn {
+.property-btn {
   margin: 7px auto;
   display: flex;
   min-width: 500px;
 }
 
-/* Show Single Property Page
-    Will need refactoring */
+/* Show Single Property Page*/
 
 #property-data-card {
   border-radius: 25px;
@@ -335,6 +334,10 @@ footer {
 }
 
 .property-card-link-buttons {
+  text-decoration: none;
+}
+
+.btn-anchor {
   text-decoration: none;
 }
 

@@ -1,13 +1,48 @@
 <%- include('../partials/_head') %>
 
-<main>
-  <h1>Edit Property Page</h1>
+<main class="container h-100 mt-5">
+  <h2 class="mb-4">Edit Property Details</h2>
+  <form
+    class="edit property-form"
+    action="/properties/<%= property._id %>?_method=PUT"
+    method="POST"
+  >
+    <div class="new-property-data">
+      <label for="city">City</label>
+      <input
+        type="text"
+        id="city"
+        name="city"
+        class="form-control"
+        value="<%= property.name %>"
+      />
 
-  <form action="/properties/<%= property._id %>?_method=PUT" method="POST">
-    <label for="city">City</label>
-    <input type="text" id="city" name="city" value="<%= property.name %>" />
+      <label for="state">State</label>
+      <input type="text" id="state" name="state" class="form-control" />
 
-    <button type="submit">Edit Property</button>
+      <label for="zip">Zip</label>
+      <input type="text" id="zip" name="zip" class="form-control" />
+
+      <label for="list_price">List Price</label>
+      <input
+        type="text"
+        id="list_price"
+        name="list_price"
+        class="form-control"
+      />
+
+      <label for="propertyPicUrl">Property Photo URL</label>
+      <input
+        type="text"
+        id="propertyPicUrl"
+        name="propertyPicUrl"
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-secondary float-right property-btn">
+      Update Property
+    </button>
   </form>
 </main>
 

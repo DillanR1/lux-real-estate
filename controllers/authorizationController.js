@@ -39,8 +39,9 @@ router.post("/login", (req, res) => {
         };
 
         // Create A New Session and Respond 200
+        // res.redirect("/profile"); for future expansion, no profile page yet
         req.session.currentUser = currentUser;
-        res.redirect("/profile");
+        res.redirect("/properties");
       } else {
         // Respond with 400 If Passwords Do Not Match
         return res.send("Passwords do not match");
