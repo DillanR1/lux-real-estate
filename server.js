@@ -79,9 +79,10 @@ app.use("/", authCtrl);
 
 // Properties Route
 app.use("/properties", propertiesCtrl);
+console.log("Server Properties Route Fires");
 
 // Users Routes
-// app.use("/profile", usersCtrl);
+app.use("/profile", usersCtrl);
 
 // API Routes
 app.use("/api/v1", apiCtrl);

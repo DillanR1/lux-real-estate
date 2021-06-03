@@ -264,6 +264,72 @@ footer {
   opacity: 0.6;
 }
 
+.sm-icons {
+  align-self: center;
+  font-size: 40px;
+  color: #994cb0;
+  padding: 5px;
+}
+
+.fa-linkedin {
+  align-self: center;
+  font-size: 40px;
+  color: #44eeaa;
+  padding: 5px;
+}
+
+.fa-github {
+  font-size: 40px;
+  color: #44eeaa;
+  padding: 5px;
+}
+
+.fa-facebook {
+  align-self: center;
+  font-size: 40px;
+  color: #44eeaa;
+  padding: 5px;
+}
+
+.fa-twitter {
+  align-self: center;
+  font-size: 40px;
+  color: #44eeaa;
+  padding: 5px;
+}
+
+.fa-instagram {
+  align-self: center;
+  font-size: 40px;
+  color: #44eeaa;
+  padding: 5px;
+}
+
+.fa-linkedin:hover {
+  transform: scale(1.1);
+  color: #44eeaa;
+}
+
+.fa-github:hover {
+  transform: scale(1.1);
+  color: #44eeaa;
+}
+
+.fa-facebook:hover {
+  transform: scale(1.1);
+  color: #44eeaa;
+}
+
+.fa-twitter:hover {
+  transform: scale(1.1);
+  color: #44eeaa;
+}
+
+.fa-instagram:hover {
+  transform: scale(1.1);
+  color: #44eeaa;
+}
+
 /*  New Property Page */
 
 .new-property-data {

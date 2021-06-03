@@ -12,23 +12,29 @@
        
       </ul>
 
-
+        // FIXME - The DOM needs to be updated when property is deleted. The old property is still listed until page is refreshed.
+        // A user must refresh the page to clear properties from DOM list
+        
       <div class="property-image-container">
         <img class="show-property" src="<%= property.propertyPicUrl %>"></img>
+        
+        <form
+        style="display: inline"
+        action="/properties/<%= property._id %>?_method=Delete"
+        method="POST"
+      >
+        <button class="btn btn-secondary float-right" type="submit" >Delete</button>
+      </form>
 
-        <a class="btn-anchor" href="/properties/<%= property._id %>?_method=Delete">
-          <button class="btn btn-secondary float-right">Delete</button>
-        </a>
-  
         <a class="btn-anchor" href="/properties/<%= property._id %>/edit">
-          <button class="btn btn-secondary float-right">Edit</button>
+          <button class="btn btn-secondary float-right" type="submit">Edit</button>
         </a>
 
         <a class="btn-anchor" href="/properties">
-          <button class="btn btn-secondary float-right">Back To Properties</button>
+          <button class="btn btn-secondary float-right" type="submit">Back To Properties</button>
         </a>
-      </div>
 
+      </div>
     </div>
 
     

@@ -18,12 +18,15 @@ router.get("/properties", (req, res) => {
   });
 });
 
-router.delete("/properties/:id", (req, res) => {
-  db.Property.findByIdAndDelete(req.params.id, (err, deletedProperty) => {
-    if (err) return res.json(err);
+// This will be the delete path. Left for notes and future expansion.
 
-    res.json({ successs: true });
-  });
-});
+// router.delete("/properties/:id", (req, res) => {
+//   db.Property.findByIdAndDelete(req.params.id, (err, deletedProperty) => {
+//     if (err) return res.json(err);
+
+//     res.json({ successs: true });
+//     console.log("this should delete something!");
+//   });
+// });
 
 module.exports = router;
