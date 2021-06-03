@@ -3,25 +3,18 @@ const session = require("express-session");
 const methodOverride = require("method-override");
 const cors = require("cors");
 require("dotenv").config();
-
 const app = express();
 const PORT = process.env.PORT || 4000;
-
-// NOTE I left the below console log in to console log the API
-//connection string in the .env backup file for learning purposes
-
-//console.log(process.env.GOOGLE_BOOKS_API)
 
 // Controllers
 const propertiesCtrl = require("./controllers/propertiesController");
 const authCtrl = require("./controllers/authorizationController");
 const usersCtrl = require("./controllers/usersController");
-const apiCtrl = require("./controllers/apiController");
 
 // Sets view engine config
 app.set("view engine", "ejs");
 
-// CORS   --- NOTE: Allows cookies to be sent back and forth from the server to the client
+// CORS
 app.use(
   cors({
     origin: ["http://localhost:4000"],
@@ -60,13 +53,6 @@ app.use(
     },
   })
 );
-
-// app.use((req, res, next) => {
-//   if (req.url !== "/login" && req.url && req.url !== "/" && !req.session.currentUser)
-//     return res.redirect("/login");
-//   next();
-// });
-
 // -------------- Routes ------------- //
 
 // Home Root Route
@@ -83,9 +69,6 @@ console.log("Server Properties Route Fires");
 
 // Users Routes
 app.use("/profile", usersCtrl);
-
-// API Routes
-app.use("/api/v1", apiCtrl);
 
 // ------------ Server Listener ----------- //
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

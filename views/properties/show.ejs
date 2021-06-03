@@ -11,9 +11,6 @@
         <p class="time-stamp">created: <%= new Date(property.createdAt).toLocaleDateString() %></p>
        
       </ul>
-
-        // FIXME - The DOM needs to be updated when property is deleted. The old property is still listed until page is refreshed.
-        // A user must refresh the page to clear properties from DOM list
         
       <div class="property-image-container">
         <img class="show-property" src="<%= property.propertyPicUrl %>"></img>
