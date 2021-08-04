@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   justify-content: center;
-  max-width: 1920px;
+  max-width: 100%;
 }
 
 ul {
@@ -31,10 +31,6 @@ nav {
 
 .navbar-brand:hover {
   color: #44eeaa;
-}
-
-main {
-  justify-content: center;
 }
 
 body,
@@ -72,7 +68,7 @@ h1,
   width: 8%;
   top: 50px;
   border: none;
-  /* margin: 0, 10px, 0, 10px; */
+  margin: 0, 10px, 0, 10px;
 }
 
 .carousel-control-next-icon,
@@ -87,16 +83,6 @@ h1,
   background-color: rgb(193, 221, 241);
   opacity: 0.6;
 }
-
-/* .view-properties {
-  color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
-  width: 220px;
-  height: 23.5%;
-  font-weight: 400;
-  line-height: 1.5;
-} */
 
 .carousel-bottom-btn {
   width: 50px;
@@ -406,18 +392,6 @@ footer {
 .btn-anchor {
   text-decoration: none;
 }
-
-/*
-.show-property {
-  width: 600px;
-  height: 600px;
-}
-
-#property-data-list {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-} */
 
 /* Login page */
 
