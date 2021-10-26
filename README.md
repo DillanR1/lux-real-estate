@@ -2,6 +2,9 @@
 
 A full stack real estate app
 
+VIEW DEPLOYMENT: 
+https://git.heroku.com/mysterious-temple-04617.git
+
 OVERVIEW
 
 This application lets users first sign up and log in to use the site. The site requires users to be authenticated before creating a property listing or browsing
