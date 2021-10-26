@@ -3,7 +3,7 @@
 A full stack real estate app
 
 VIEW DEPLOYMENT: 
-https://git.heroku.com/mysterious-temple-04617.git
+https://mysterious-temple-04617.herokuapp.com
 
 OVERVIEW
 
